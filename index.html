@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑神話：萬妖考 - 《黑神話：悟空》深度神話與角色原型解析</title>
+    <meta name="description" content="深度解析《黑神話：悟空》中的每一個角色、場景和法寶背後的神話原型與文化考究。獨家分析最新鐘馗預告片，探索遊戲的黑暗西遊世界。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "黑神話：萬妖考",
+      "url": "https://www.wukong-lore.com",
+      "description": "深度解析《黑神話：悟空》中的每一個角色、場景和法寶背後的神話原型與文化考究。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.wukong-lore.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.wukong-lore.com/article/zhong-kui-analysis"
+      },
+      "headline": "判官筆、奈何橋、地府門：鐘馗預告片逐幀分析",
+      "description": "從唐代辟邪神祇到如今的地府判官，鐘馗的形象經歷了怎樣的變遷？本次預告片中出現的場景和器物，又在中國傳統神話中對應著哪些駭人的傳說？",
+      "image": "https://placehold.co/800x600/1F2937/991B1B?text=鐘馗預告片封面",
+      "author": {
+        "@type": "Organization",
+        "name": "萬妖考據組"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "黑神話：萬妖考",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://placehold.co/60x60/D97706/FFFFFF?text=Logo"
+        }
+      },
+      "datePublished": "2025-08-19"
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* 深藍灰色背景 */
+            color: #E5E7EB; /* 淺灰色文字 */
+        }
+        .font-noto-serif {
+            font-family: 'Noto Serif SC', serif;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=%E9%BB%91%E7%A5%9E%E8%A9%B1%E8%83%8C%E6%99%AF');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bg-gradient-dark {
+            background: linear-gradient(to top, #111827 5%, rgba(17, 24, 39, 0.6) 100%);
+        }
+        .card-bg {
+            background-color: #1F2937;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .card-bg:hover {
+            background-color: #374151;
+            transform: translateY(-8px);
+        }
+        .text-gold { color: #D97706; }
+        .border-gold { border-color: #D97706; }
+        .bg-gold { background-color: #D97706; }
+        .hover-bg-gold:hover { background-color: #B45309; }
+        .text-crimson { color: #991B1B; }
+        /* 動畫效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-section {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-gray-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-noto-serif font-bold text-white tracking-wider">
+                萬<span class="text-gold">妖</span>考
+            </a>
+            <div class="hidden md:flex items-center space-x-8" id="desktop-menu">
+                <a href="#latest-focus" class="text-gray-300 hover:text-gold transition duration-300">最新解析</a>
+                <a href="#character-lore" class="text-gray-300 hover:text-gold transition duration-300">角色考究</a>
+                <a href="#mythos-universe" class="text-gray-300 hover:text-gold transition duration-300">神話宇宙</a>
+                <a href="/about" class="text-gray-300 hover:text-gold transition duration-300">關於我們</a>
+                <div class="border-l border-gray-600 h-6"></div>
+                <a href="/en" class="text-gray-400 hover:text-white transition duration-300 text-sm">EN</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#latest-focus" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">最新解析</a>
+            <a href="#character-lore" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">角色考究</a>
+            <a href="#mythos-universe" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">神話宇宙</a>
+            <a href="/about" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">關於我們</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg relative h-[80vh] flex items-center justify-center text-center text-white">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative z-10 px-4">
+                <h1 class="text-4xl md:text-6xl font-noto-serif font-bold tracking-widest leading-tight mb-4">
+                    勘破<span class="text-gold">神魔</span>表象<br>洞見<span class="text-crimson">萬妖</span>本源
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                    我們不僅追蹤《黑神話：悟空》的最新動態，更致力於挖掘其背後深厚的中國神話體系與文化原型。
+                </p>
+                <a href="#latest-focus" class="bg-gold text-white font-bold py-3 px-8 rounded-lg text-lg hover-bg-gold transition duration-300 transform hover:scale-105 inline-block">
+                    直擊「鐘馗」預告片解析
+                </a>
+            </div>
+        </section>
+
+        <!-- Main Content with Gradient Background -->
+        <div class="bg-gradient-dark">
+            <!-- Latest Focus Section -->
+            <section id="latest-focus" class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-noto-serif font-bold text-center mb-4">
+                        最新焦點：《黑神話：悟空》<span class="text-crimson">「鬼王」</span>鐘馗現身
+                    </h2>
+                    <p class="text-center text-gray-400 mb-12">發布於 2025年8月19日 by 萬妖考據組</p>
+                    <div class="bg-gray-800 rounded-lg shadow-2xl overflow-hidden md:flex items-center">
+                        <div class="md:w-1/2 video-container">
+                            <!-- Embedded Video Player -->
+                            <iframe src="https://www.youtube.com/embed/O2nNljv0MOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                            <p class="text-sm text-gold mb-2">預告片深度解析</p>
+                            <h3 class="text-2xl lg:text-3xl font-noto-serif font-bold mb-4">
+                                判官筆、奈何橋、地府門：鐘馗預告片逐幀分析
+                            </h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                從唐代辟邪神祇到如今的地府判官，鐘馗的形象經歷了怎樣的變遷？本次預告片中出現的場景和器物，又在中國傳統神話中對應著哪些駭人的傳說？我們將為您一一揭曉。
+                            </p>
+                            <a href="/article/zhong-kui-analysis" class="text-gold font-semibold hover:text-white transition duration-300">
+                                閱讀全文 &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Trending Section -->
+            <section class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-noto-serif font-bold text-center mb-12">《黑神話：悟空》熱門考究</h2>
+                    <div class="max-w-2xl mx-auto">
+                        <a href="/article/who-is-wukong" class="block p-4 mb-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+                            <p class="text-gold">1. 關於“天命人”究竟是誰的十大猜想</p>
+                        </a>
+                        <a href="/article/xiao-xi-tian" class="block p-4 mb-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+                            <p class="text-gold">2. 為何說“小西天”可能是遊戲中最具顛覆性的章節？</p>
+                        </a>
+                        <a href="/article/three-factions" class="block p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300">
+                            <p class="text-gold">3. 從PV細節看《黑神話》世界觀下的道、佛、妖三派勢力</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Character Lore Section -->
+            <section id="character-lore" class="py-20 bg-gray-900 bg-opacity-50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-noto-serif font-bold text-center mb-12">登場角色神話考究</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="card-bg rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://placehold.co/600x400/111827/E5E7EB?text=%E5%AD%99%E6%82%9F%E7%A9%BA" alt="《黑神話：悟空》中的主角悟空形象" class="w-full h-48 object-cover" loading="lazy">
+                            <div class="p-6">
+                                <h3 class="text-xl font-noto-serif font-bold mb-2">天命人 · 悟空</h3>
+                                <p class="text-gray-400 text-sm">是齊天大聖，還是六耳獼猴？探討遊戲主角身份的多種可能性及其在原著中的伏筆。</p>
+                            </div>
+                        </div>
+                        <div class="card-bg rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://placehold.co/600x400/111827/E5E7EB?text=%E8%99%8E%E5%85%88%E9%8B%92" alt="《黑神話：悟空》中的Boss虎先鋒" class="w-full h-48 object-cover" loading="lazy">
+                            <div class="p-6">
+                                <h3 class="text-xl font-noto-serif font-bold mb-2">黃風嶺 · 虎先鋒</h3>
+                                <p class="text-gray-400 text-sm">作為玩家面對的第一个精英怪，它的設計融合了哪些傳統戲曲臉譜與山君崇拜的元素？</p>
+                            </div>
+                        </div>
+                        <div class="card-bg rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://placehold.co/600x400/111827/E5E7EB?text=%E5%9C%9F%E5%9C%B0%E7%A5%9E" alt="《黑神話：悟空》中的NPC土地神" class="w-full h-48 object-cover" loading="lazy">
+                            <div class="p-6">
+                                <h3 class="text-xl font-noto-serif font-bold mb-2">引路者 · 土地神</h3>
+                                <p class="text-gray-400 text-sm">從慈祥的引路人到可能的背叛者，分析各地土地神在民間傳說中複雜多變的形象。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <a href="/characters" class="bg-transparent border-2 border-gold text-gold font-bold py-3 px-8 rounded-lg hover:bg-gold hover:text-white transition duration-300">
+                            查看所有妖魔神佛
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mythos Universe Section -->
+            <section id="mythos-universe" class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-noto-serif font-bold text-center mb-12">探索《黑神話》<span class="text-gold">神話宇宙</span></h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="card-bg p-8 rounded-lg">
+                            <svg class="w-12 h-12 mx-auto mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <h3 class="text-xl font-noto-serif font-bold mb-2">地府結構考</h3>
+                            <p class="text-gray-400 text-sm">從十殿閻羅到十八層地獄，還原《黑神話》世界中可能出現的完整冥界版圖。</p>
+                        </div>
+                        <div class="card-bg p-8 rounded-lg">
+                            <svg class="w-12 h-12 mx-auto mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            <h3 class="text-xl font-noto-serif font-bold mb-2">西遊法寶錄</h3>
+                            <p class="text-gray-400 text-sm">金箍棒、紫金葫蘆、芭蕉扇……盤點遊戲中已登場和可能登場的諸天神佛法寶。</p>
+                        </div>
+                        <div class="card-bg p-8 rounded-lg">
+                            <svg class="w-12 h-12 mx-auto mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            <h3 class="text-xl font-noto-serif font-bold mb-2">妖魔七大聖</h3>
+                            <p class="text-gray-400 text-sm">除了悟空，其餘六大聖是誰？他們又會在遊戲中扮演怎樣的角色？</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Newsletter CTA Section -->
+            <section id="about" class="py-20 bg-gray-900 bg-opacity-50">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl font-noto-serif font-bold mb-4">成為西行路上的同行者</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto mb-8">訂閱我們的郵件，第一時間獲取《黑神話》的深度神話解析，不錯過任何蛛絲馬跡。</p>
+                    <form class="max-w-md mx-auto flex">
+                        <input type="email" placeholder="請輸入您的電子郵件" class="w-full bg-gray-800 text-white px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-gold">
+                        <button type="submit" class="bg-gold text-white font-bold px-6 rounded-r-lg hover-bg-gold transition duration-300">訂閱</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 黑神話：萬妖考. All Rights Reserved.</p>
+            <p class="text-sm mt-2">本站為玩家創建的非官方粉絲網站，所有《黑神話：悟空》相關素材版權歸遊戲科學所有。</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-gold transition duration-300" aria-label="Bilibili">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM9.5 16.5v-9l7 4.5-7 4.5z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gold transition duration-300" aria-label="微博">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.253 3.122a1.536 1.536 0 00-1.08-.457H3.827a1.536 1.536 0 00-1.08.457C2.083 3.787 1.83 4.88 2.22 5.924l1.96 5.226a.384.384 0 00.363.275h15.02a.384.384 0 00.363-.275l1.96-5.226c.39-1.043.137-2.137-.533-2.802zm-1.68 1.533L18.4 8.34H5.6L4.427 4.655h15.146zM21.84 12.553H2.16a.384.384 0 00-.383.376v.013c.138 2.217 1.332 6.12 5.02 7.575 1.488.587 3.23.883 5.203.883s3.715-.296 5.204-.883c3.687-1.455 4.881-5.358 5.02-7.575v-.013a.384.384 0 00-.384-.376z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gold transition duration-300" aria-label="YouTube">
+                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="to-top-button" class="hidden fixed bottom-8 right-8 bg-gold p-3 rounded-full text-white hover-bg-gold transition duration-300 shadow-lg">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Scroll to Top Button
+            const toTopButton = document.getElementById('to-top-button');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    toTopButton.classList.remove('hidden');
+                } else {
+                    toTopButton.classList.add('hidden');
+                }
+            });
+            toTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-section');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
